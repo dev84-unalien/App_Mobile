@@ -1,0 +1,45 @@
+<ion-app>
+    <ion-menu contentId="content" side="start">
+      <ion-header>
+        <ion-toolbar color="dark">
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-menu-toggle>
+        <ion-list>
+          <ion-item>
+              <ion-icon name="home" slot="start"></ion-icon>
+              <ion-label>Accueil</ion-label>
+          </ion-item>
+          <ion-item>
+              <ion-icon name="person" slot="start"></ion-icon>
+              <ion-label>Profil</ion-label>
+          </ion-item>
+          <ion-item>
+              <ion-icon name="chatbubbles" slot="start"></ion-icon>
+              <ion-label>Messages</ion-label>
+          </ion-item>
+          <ion-item>
+              <ion-icon name="settings" slot="start"></ion-icon>
+              <ion-label>Options</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-menu-toggle>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="content"></ion-router-outlet>
+    <ion-header>
+        <ion-toolbar color="dark">
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-title>Accueil</ion-title>
+        </ion-toolbar>
+        <ion-button color="danger" [routerLink]="['/inscription']">Redirect inscription</ion-button>
+        <ion-button color="danger" [routerLink]="['/culture']">Redirect culture</ion-button>
+      </ion-header>
+  </ion-app>
