@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {NavController} from '@ionic/angular';
+import {AlertController} from '@ionic/angular';
 
 
 @Component({
@@ -8,10 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccueilPage implements OnInit {
 
-  constructor() {
-  }
+  connected = false;
 
-  ngOnInit() {
+  constructor(public nav: NavController) {}
+
+  ngOnInit() {}
+
+  ionViewDidEnter() {
+    this.connected = localStorage.connection == 'true';
   }
 
 }

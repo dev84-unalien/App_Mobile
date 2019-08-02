@@ -27,10 +27,27 @@
               <ion-icon name="settings" slot="start"></ion-icon>
               <ion-label>Options</ion-label>
           </ion-item>
+          <ion-item href="/connexion">
+              <ion-icon name="close-circle" slot="start" ></ion-icon>
+                <ion-label id="deco">Déconnexion</ion-label>
+          </ion-item>
         </ion-list>
       </ion-menu-toggle>
       </ion-content>
     </ion-menu>
+    <ion-card>
+        <img src="https://risibank.fr/cache/stickers/d1242/124210-full.png" />
+        <ion-card-header>
+            <ion-card-title>Ricardo Milos, MEME d'Internet !</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            Ricardo Milos naquit à Rio, au Brézil. Ricardo est devenu modèle grâce à l'aide de son père alors photographe.
+            Plus tard Ricardo réalisa des films erotiques sur un site homo-sexuel, l'une des vidéos qu'il a partagé est devenu un incontournable meme d'Internet !
+            Vous savez sûrement de laquelle nous parlons, c'est Ricardo qui danse avec un bandana et un string Américain.
+            Quelqu'un a partagé la vidéo originale avec une bande-son "DotA - Basshunter" qui aujourd'hui atteint les 17 Millions de vue.
+            Depuis alors, Ricardo apparaît partout sur youtube, sur les forums et même certains jeux.
+        </ion-card-content>
+    </ion-card>
     <ion-router-outlet id="content"></ion-router-outlet>
     <ion-header>
         <ion-toolbar color="dark">
@@ -39,8 +56,7 @@
           </ion-buttons>
           <ion-title>Accueil</ion-title>
         </ion-toolbar>
-        <ion-button color="danger" [routerLink]="['/connexion']">Redirect connexion</ion-button>
         <ion-button color="danger" [routerLink]="['/inscription']">Redirect inscription</ion-button>
-        <ion-button color="danger" [routerLink]="['/culture']">Redirect culture</ion-button>
-      </ion-header>
+        <ion-button color="danger" [hidden]="connected == false" [routerLink]="['/culture']">Redirect culture</ion-button>
+    </ion-header>
   </ion-app>
