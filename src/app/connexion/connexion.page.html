@@ -1,9 +1,20 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-title>Connexion</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-align-items-center">
+<!--  <ion-button color="danger" [routerLink]="['/inscription']">Redirect inscription</ion-button>-->
+<!--  <ion-button color="danger" [routerLink]="['/culture']">Redirect culture</ion-button>-->
+<ion-item>
+  <ion-input color="danger" placeholder="Pseudonyme ou Email"></ion-input>
+</ion-item>
+  <ion-item>
+  <ion-input color="danger" placeholder="Mot de passe"></ion-input>
+  </ion-item>
+<ion-button color="danger" [routerLink]="['/accueil']">Se connecter</ion-button>
+
+
 
 </ion-content>
