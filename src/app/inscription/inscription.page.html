@@ -5,19 +5,18 @@
 </ion-header>
 
 <ion-content>
-<form onsubmit="processForm(event)">
     <ion-list lines="full" class="ion-no-margin ion-no-padding">
       <ion-item>
-        <ion-input placeholder="Pseudo"></ion-input>
+        <ion-input placeholder="Pseudo" [(ngModel)]="pseudo"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-input placeholder="E-Mail"></ion-input>
+        <ion-input placeholder="E-Mail" [(ngModel)]="mail"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-input placeholder="Mot de passe" type="password"></ion-input>
+        <ion-input placeholder="Mot de passe" [(ngModel)]="password" type="password"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-input placeholder="Pays"></ion-input>
+        <ion-input placeholder="Pays" [(ngModel)]="pays"></ion-input>
       </ion-item>
     </ion-list>
 
@@ -28,5 +27,4 @@
       Déjà inscrit ? <ion-button color="danger" [routerLink]="['/connexion']">Clique ici !</ion-button>
       </ion-text>
     </div>
-  </form>
 </ion-content>

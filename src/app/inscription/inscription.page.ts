@@ -7,9 +7,8 @@ import {NavController} from '@ionic/angular';
   styleUrls: ['./inscription.page.scss'],
 })
 export class InscriptionPage implements OnInit {
-  name: any;
-  firstname: any;
-  pseudoEmail: any;
+  pseudo: any;
+  mail: any;
   password: any;
   pays: any;
 
@@ -17,7 +16,7 @@ export class InscriptionPage implements OnInit {
   ngOnInit() {}
 
   connexion() {
-    if (this.pseudoEmail && this.password && this.name && this.firstname && this.pays) {
+    if (this.pseudo && this.mail && this.password && this.pays) {
       if (this.password.length < 8) {
         alert('Le mot de passe doit contenir au moins 8 caracteres');
       } else {
