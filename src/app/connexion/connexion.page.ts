@@ -11,10 +11,9 @@ export class ConnexionPage implements OnInit {
   pseudoEmail: any;
   password: any;
 
-  constructor(public nav: NavController) { }
+  constructor(public nav: NavController) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
   connexion() {
     if (this.pseudoEmail && this.password) {
       if (this.password.length < 8) {
@@ -24,7 +23,7 @@ export class ConnexionPage implements OnInit {
         this.nav.navigateForward('accueil');
       }
     } else {
-      alert('Email ou password manquant !');
+      alert('Email ou mot de passe manquant !');
     }
   }
 

@@ -6,7 +6,8 @@ const routes: Routes = [
   { path: 'inscription', loadChildren: './inscription/inscription.module#InscriptionPageModule' },
   { path: 'accueil', loadChildren: './accueil/accueil.module#AccueilPageModule' },
   { path: 'culture', loadChildren: './culture/culture.module#CulturePageModule' },
-  { path: 'connexion', loadChildren: './connexion/connexion.module#ConnexionPageModule' },
+  { path: 'connexion', loadChildren: './connexion/connexion.module#ConnexionPageModule' },  { path: 'options', loadChildren: './options/options.module#OptionsPageModule' },
+
 
 ];
 
