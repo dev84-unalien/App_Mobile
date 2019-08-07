@@ -23,6 +23,10 @@
               <ion-icon name="chatbubbles" slot="start"></ion-icon>
               <ion-label>Messages</ion-label>
           </ion-item>
+            <ion-item href="/culture">
+                <ion-icon name="globe" slot="start"></ion-icon>
+                <ion-label>Culture</ion-label>
+            </ion-item>
           <ion-item href="/options">
               <ion-icon name="settings" slot="start"></ion-icon>
               <ion-label>Options</ion-label>
@@ -56,7 +60,6 @@
           </ion-buttons>
           <ion-title>Accueil</ion-title>
         </ion-toolbar>
-        <ion-button color="danger" [routerLink]="['/inscription']">Redirect inscription</ion-button>
         <ion-button color="danger" [hidden]="connected == false" [routerLink]="['/culture']">Redirect culture</ion-button>
     </ion-header>
   </ion-app>

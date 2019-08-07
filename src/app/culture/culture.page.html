@@ -1,19 +1,62 @@
-<ion-header>
-    <ion-toolbar color="dark">
-      <ion-title>Culture</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-content>
-      <ion-button color="danger"[routerLink]="['/accueil']">Redirect Accueil</ion-button>
-      <ion-card>
-          <img src="https://medias.laprovence.com/Di04fa_e726DbLNJ-wL2l0IUgt8=/0x31:642x384/1116x670/top/smart/538a249440894497858e2853869c6438/20190723_1_1_3_1_1_obj20687906_1.jpg" />
-          <ion-card-header>
+
+<ion-app>
+    <ion-card>
+        <img src="https://medias.laprovence.com/Di04fa_e726DbLNJ-wL2l0IUgt8=/0x31:642x384/1116x670/top/smart/538a249440894497858e2853869c6438/20190723_1_1_3_1_1_obj20687906_1.jpg" />
+        <ion-card-header>
             <ion-card-subtitle>Destination</ion-card-subtitle>
             <ion-card-title>Avenir84, Avignon</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
+        </ion-card-header>
+        <ion-card-content>
             Au rez-de-chaussée d'un bâtiment mis à disposition par Mistral-Habitat, 16 stagiaires de la formation initiée par Avenir 84. En décembre, ils seront tous opérationnels est-il assuré.
-          </ion-card-content>
-        </ion-card>
-  </ion-content>
+        </ion-card-content>
+    </ion-card>
+    <ion-menu contentId="content" side="start">
+        <ion-header>
+            <ion-toolbar color="dark">
+                <ion-buttons slot="start">
+                    <ion-menu-button></ion-menu-button>
+                </ion-buttons>
+                <ion-title>Menu</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content>
+            <ion-menu-toggle>
+                <ion-list>
+                    <ion-item>
+                        <ion-icon name="home" slot="start"></ion-icon>
+                        <ion-label>Accueil</ion-label>
+                    </ion-item>
+                    <ion-item>
+                        <ion-icon name="person" slot="start"></ion-icon>
+                        <ion-label>Profil</ion-label>
+                    </ion-item>
+                    <ion-item>
+                        <ion-icon name="chatbubbles" slot="start"></ion-icon>
+                        <ion-label>Messages</ion-label>
+                    </ion-item>
+                    <ion-item href="/culture" color="black">
+                        <ion-icon name="globe" slot="start"></ion-icon>
+                        <ion-label>Culture</ion-label>
+                    </ion-item>
+                    <ion-item href="/options">
+                        <ion-icon name="settings" slot="start"></ion-icon>
+                        <ion-label>Options</ion-label>
+                    </ion-item>
+                    <ion-item href="/connexion">
+                        <ion-icon name="close-circle" slot="start" ></ion-icon>
+                        <ion-label id="deco">Déconnexion</ion-label>
+                    </ion-item>
+                </ion-list>
+            </ion-menu-toggle>
+        </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="content"></ion-router-outlet>
+    <ion-header>
+        <ion-toolbar color="dark">
+            <ion-buttons slot="start">
+                <ion-menu-button></ion-menu-button>
+            </ion-buttons>
+            <ion-title>Culture</ion-title>
+        </ion-toolbar>
+    </ion-header>
+</ion-app>
